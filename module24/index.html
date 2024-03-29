@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipultion</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="fHeader">Wel come DOM Manipulation</h1>
+    </header>
+    <main id="main-container">
+      <section>
+        <h1 id="fruits" class="bg-fruit bg-green yellow-color">
+          Fruits Items I Like:
+        </h1>
+        <ul>
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Mango</li>
+        </ul>
+      </section>
+      <section>
+        <h1 id="games">Game that i like:</h1>
+        <ul class="game-hobby">
+          <li>Cricket</li>
+          <li>Football</li>
+          <li>Hadudu</li>
+        </ul>
+      </section>
+      <section class="lsection">
+        <h1 id="hobby">Hobbies</h1>
+        <ul class="game-hobby">
+          <li>Developers</li>
+          <li>Programmars</li>
+          <li>Travellers</li>
+        </ul>
+      </section>
+      <section class="font">
+        <ul id="hello">
+          <li>HyperText Markup Language</li>
+          <li>CaseCading Style Sheet</li>
+          <li>Python</li>
+          <li>JavaScript</li>
+        </ul>
+      </section>
+    </main>
+    <script src="index.js"></script>
+    <script>
+      // const lifind = document.querySelector(".game-hobby li");
+
+      // for (let item of lifind) {
+      //   console.log(item.innerText);
+      // }
+      // console.log(lifind);
+      // document.getElementById("hobby").style.color = "darkgreen";
+      // document.getElementById("hobby").style.fontSize = "50px";
+      // document.getElementById("hobby").style.fontFamily = "tahoma";
+      // document.getElementById("hobby").style.padding = "10px";
+      // document.getElementById("hobby").style.textAlign = "center";
+      // document.getElementById("fHeader").style.color = "darkblue";
+      // document.getElementById("fHeader").style.borderTop = "2px solid red";
+      // let title = document.getElementById("fHeader");
+      // title.setAttribute("title", "tooltrip set by js");
+      const addNewElement = document.getElementById("hello");
+      const li = document.createElement("li");
+      li.innerText = "MongoDB and Mongoose";
+      addNewElement.append(li);
+    </script>
+  </body>
+</html>
