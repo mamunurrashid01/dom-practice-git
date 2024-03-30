@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Common Event Handler Discussion</title>
+  </head>
+  <body>
+    <h1 id="fin">Final Dom event handler</h1>
+    <p id="p-tag">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+      illum!
+    </p>
+    <button onclick="textChenge()">Click</button>
+    <button id="listner">Handle event by addEventListener</button>
+    <br />
+    <br />
+    <p id="name">Show the name here</p>
+    <input id="input-field" type="text" />
+    <button id="update">Update Btn</button>
+    <script>
+      function textChenge() {
+        const text = document.getElementById("fin");
+        text.innerText = "Chenge the text using click event handler";
+      }
+      document.getElementById("listner").addEventListener("click", function () {
+        const textChenge = document.getElementById("p-tag");
+        textChenge.innerText = "The text will chenge by event listener";
+      });
+      document.getElementById("update").addEventListener("click", function () {
+        const inputField = document.getElementById("input-field");
+        const inputText = inputField.value;
+        const getPtag = document.getElementById("name");
+        getPtag.innerText = inputText;
+        inputField.value = " ";
+      });
+    </script>
+  </body>
+</html>

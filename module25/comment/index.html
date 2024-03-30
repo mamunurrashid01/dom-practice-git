@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment sction create</title>
+  </head>
+  <body>
+    <div id="comment-container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas magnam
+        nihil optio molestiae enim sint veritatis adipisci corrupti quod
+        consectetur quasi voluptates impedit, ratione nobis inventore sunt earum
+        totam dolor molestias reprehenderit ducimus maxime eos. Illo, assumenda.
+        Minima, culpa perspiciatis iste quae, est voluptatem accusantium quos
+        laudantium debitis aliquam incidunt.
+      </p>
+      <p>
+        Inventore velit unde id impedit, quas rem harum fugiat dolore totam odio
+        culpa, enim corporis praesentium nisi. Quasi, animi quas. Porro, quod
+        temporibus veritatis nostrum accusamus optio tempore sequi fugiat
+        nesciunt ad voluptas aliquam maxime odit natus dicta repellendus non.
+        Voluptatum ullam eius ex minima odio ipsa quam aperiam laudantium.
+      </p>
+      <p>
+        Quis fuga qui ducimus culpa quas ut blanditiis veniam, architecto ipsam
+        debitis hic quisquam. Doloribus quas nihil quam corrupti accusamus
+        tenetur voluptate magnam recusandae eos architecto a harum debitis sed
+        porro quasi pariatur eius cumque, impedit sint mollitia laudantium
+        maiores fuga laboriosam nesciunt. Ipsam, sapiente? Suscipit eius fugiat
+        cum saepe.
+      </p>
+    </div>
+    <textarea name="text" id="textArea" cols="60" rows="10"></textarea>
+    <br /><br />
+    <button id="post">Post</button>
+    <script>
+      document.getElementById("post").addEventListener("click", function () {
+        const getText = document.getElementById("textArea");
+        const getVal = getText.value;
+        const creatPtag = document.createElement("p");
+        creatPtag.innerText = getVal;
+        const getContainer = document.getElementById("comment-container");
+        getContainer.appendChild(creatPtag);
+        getText.value = "";
+      });
+      let getPTags = document.querySelectorAll("p");
+      for (let items of getPTags) {
+        items.style.backgroundColor = "steelblue";
+        items.style.padding = "10px";
+      }
+    </script>
+  </body>
+</html>
