@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore more event</title>
+  </head>
+  <body>
+    <h1>Explore more event handler</h1>
+    <button id="btn-event">click event</button>
+    <input id="inputText" type="text" />
+    <script>
+      // document
+      //   .getElementById("inputText")
+      //   .addEventListener("mouseenter", function () {
+      //     console.log("event triggered");
+      //   });
+      // document
+      //   .getElementById("inputText")
+      //   .addEventListener("mousemove", function () {
+      //     console.log("event triggered");
+      //   });
+      // document
+      //   .getElementById("inputText")
+      //   .addEventListener("focus", function () {
+      //     console.log("event triggered");
+      //   });
+      // document
+      //   .getElementById("inputText")
+      //   .addEventListener("blur", function () {
+      //     console.log("event triggered");
+      //   });
+      // document
+      //   .getElementById("inputText")
+      //   .addEventListener("keydown", function (event) {
+      //     console.log(event.target.value);
+      //   });
+      // NB:keydown and keypress are same output given
+      document
+        .getElementById("inputText")
+        .addEventListener("keypress", function (event) {
+          console.log(event.target.value);
+        });
+      // document
+      //   .getElementById("inputText")
+      //   .addEventListener("keyup", function (event) {
+      //     console.log(event.target.value);
+      //   });
+    </script>
+  </body>
+</html>

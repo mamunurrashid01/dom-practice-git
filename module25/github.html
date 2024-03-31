@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To delete permission Explore</title>
+  </head>
+  <body>
+    <!-- option 1 -->
+    <h1 id="secrete">My secrete info</h1>
+    <button id="delete" disabled>delete</button>
+
+    <!-- option 2 -->
+    <input id="delete-text" type="text" />
+    <script>
+      // option 1
+      document.getElementById("delete").addEventListener("click", function () {
+        const text = document.getElementById("secrete");
+        text.style.display = "none";
+      });
+      // option 2
+      document
+        .getElementById("delete-text")
+        .addEventListener("keyup", function (event) {
+          const getText = event.target.value;
+          const deleteBtn = document.getElementById("delete");
+
+          if (getText === "delete") {
+            deleteBtn.removeAttribute("disabled");
+          } else {
+            deleteBtn.setAttribute("disabled", true);
+          }
+          event.target.value = "";
+        });
+    </script>
+  </body>
+</html>

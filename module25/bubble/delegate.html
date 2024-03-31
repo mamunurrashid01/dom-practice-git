@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Explore Event Delegate</h1>
+    <section>
+      <ul id="list-container">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Quasi, nihil repellendus?</li>
+        <li class="item">Mollitia, earum aliquam?</li>
+        <li class="item">Dolorum, ipsam error!</li>
+        <li class="item">Quisquam, minus dignissimos.</li>
+        <li class="item">Repellendus, voluptas doloribus.</li>
+      </ul>
+    </section>
+    <button id="add-new">Add New items</button>
+
+    <script>
+      // const items = document.getElementsByClassName("item");
+      // for (let item of items) {
+      //   item.addEventListener("click", function (event) {
+      //     // console.log("clicked li", item);
+      //     // console.log(event.target.parentNode);
+      //     event.target.parentNode.removeChild(event.target); //to remove clicked child
+      //   });
+      // }
+      document
+        .getElementById("list-container")
+        .addEventListener("click", function (event) {
+          event.target.parentNode.removeChild(event.target); //it's called delegate or delegation when you call parent of the list
+        });
+
+      document.getElementById("add-new").addEventListener("click", function () {
+        const listCotainer = document.getElementById("list-container");
+        const li = document.createElement("li");
+        li.innerText = "Add brand new item.";
+        listCotainer.appendChild(li);
+      });
+    </script>
+  </body>
+</html>

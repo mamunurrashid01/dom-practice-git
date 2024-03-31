@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exploring Event Bubble</title>
+  </head>
+  <style>
+    li {
+      background-color: darkgoldenrod;
+      color: #fff;
+      margin-bottom: 5px;
+      padding: 10px;
+      width: 250px;
+    }
+    li:hover {
+      background-color: darkcyan;
+      color: aliceblue;
+    }
+  </style>
+  <body>
+    <section id="sectionUl">
+      <h1>Event Bubble Explorinng</h1>
+      <ul id="list-ul">
+        <li id="item-1">Lorem, ipsum dolor.</li>
+        <li id="item-2">Quibusdam, facere possimus!</li>
+        <li id="item-3">Delectus, porro praesentium.</li>
+        <li id="item-4">Tempore, fugit atque?</li>
+        <li id="item-5">Voluptatum, suscipit corporis!</li>
+        <li id="item-6">Magnam, ad. Omnis.</li>
+      </ul>
+    </section>
+
+    <script>
+      document
+        .getElementById("item-2")
+        .addEventListener("click", function (event) {
+          console.log("Item 2 clicked");
+          // if i want to stop bubbling or propagation then i can use /stopProgation() function/
+          event.stopPropagation();
+          // event.stopImmediatePropagation();
+        });
+      document.getElementById("list-ul").addEventListener("click", function () {
+        console.log("Ul clicked");
+      });
+      document
+        .getElementById("sectionUl")
+        .addEventListener("click", function () {
+          console.log("section clicked");
+        });
+    </script>
+  </body>
+</html>
